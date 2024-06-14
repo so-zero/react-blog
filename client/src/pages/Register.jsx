@@ -35,11 +35,11 @@ export default function Register() {
 
   return (
     <section className="register">
-      <div className="container register-container">
+      <div className="container register__container">
         <h2>회원가입</h2>
         <form className="form" onSubmit={handleSubmit}>
           {error && <p className="form__error-message">{error}</p>}
-          <div className="form-list">
+          <div className="form__list">
             <label htmlFor="name" />
             <input
               id="name"
@@ -52,7 +52,7 @@ export default function Register() {
             />
           </div>
 
-          <div className="form-list">
+          <div className="form__list">
             <label htmlFor="email" />
             <input
               id="email"
@@ -64,7 +64,7 @@ export default function Register() {
             />
           </div>
 
-          <div className="form-list">
+          <div className="form__list">
             <label htmlFor="password" />
             <input
               id="password"
@@ -76,7 +76,7 @@ export default function Register() {
             />
           </div>
 
-          <div className="form-list">
+          <div className="form__list">
             <label htmlFor="confirmPassword" />
             <input
               id="confirmPassword"
@@ -88,7 +88,7 @@ export default function Register() {
             />
           </div>
 
-          <button type="submit" className="btn register-btn">
+          <button type="submit" className="btn register__btn">
             회원가입
           </button>
         </form>

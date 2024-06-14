@@ -9,12 +9,12 @@ import { HiBars3BottomLeft } from "react-icons/hi2";
 
 export default function Header() {
   const [isNavShowing, setIsNavShowing] = useState(
-    window.innerWidth > 800 ? true : false
+    window.innerWidth > 767 ? true : false
   );
   const { currentUser } = useContext(UserContext);
 
   const handleClick = () => {
-    if (window.innerWidth < 800) {
+    if (window.innerWidth < 767) {
       setIsNavShowing(false);
     } else {
       setIsNavShowing(true);

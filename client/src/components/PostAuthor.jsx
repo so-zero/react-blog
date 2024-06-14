@@ -20,12 +20,17 @@ export default function PostAuthor({ authorId, createdAt }) {
     getAuthor();
   }, [authorId]);
   return (
-    <div className="post__author-details">
-      <Link to={`posts/users/${authorId}`}>
+    <div className="post__authors">
+      <Link to={`posts/users/${authorId}`} className="post__author">
+        <img
+          src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${author?.avatar}`}
+          alt="user profile"
+        />
         <h5 className="post__author">{author?.name}</h5>
       </Link>
-      <div></div>
-      <span>{moment(createdAt).fromNow()}</span>
+      <div className="post__author-details">
+        <span>{moment(createdAt).fromNow()}</span>
+      </div>
     </div>
   );
 }

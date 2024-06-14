@@ -32,6 +32,9 @@ export default function CategoryPosts() {
   }
   return (
     <section className="posts">
+      <div className="category-text">
+        <h1>{category}</h1>
+      </div>
       <div className="container posts__container">
         {posts.map((post) => (
           <PostCard

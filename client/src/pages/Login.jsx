@@ -36,12 +36,12 @@ export default function Login() {
 
   return (
     <section className="login">
-      <div className="container login-container">
+      <div className="container login__container">
         <h2>로그인</h2>
         <form className="form" onSubmit={handleSubmit}>
           {error && <p className="form__error-message">{error}</p>}
 
-          <div className="form-list">
+          <div className="form__list">
             <label htmlFor="email" />
             <input
               id="email"
@@ -54,7 +54,7 @@ export default function Login() {
             />
           </div>
 
-          <div className="form-list">
+          <div className="form__list">
             <label htmlFor="password" />
             <input
               id="password"
@@ -66,7 +66,7 @@ export default function Login() {
             />
           </div>
 
-          <button type="submit" className="btn login-btn">
+          <button type="submit" className="btn login__btn">
             로그인
           </button>
         </form>

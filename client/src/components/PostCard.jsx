@@ -23,20 +23,22 @@ export default function PostCard({
         />
       </div>
       <div className="post__content">
-        <div className="post__content-group">
+        <div>
           <PostAuthor authorId={authorId} createdAt={createdAt} />
-          <Link to={`/posts/categories/${category}`} className="post__category">
-            {category}
-          </Link>
         </div>
         <Link to={`posts/${postId}`}>
           <h3 className="post__title">{postTitle}</h3>
         </Link>
         <p className="post__desc" dangerouslySetInnerHTML={{ __html: desc }} />
       </div>
-      <Link to={`posts/${postId}`} className="post__btn">
-        Continue reading
-      </Link>
+      <div className="post__content-group">
+        <Link to={`/posts/categories/${category}`} className="post__category">
+          {category}
+        </Link>
+        <Link to={`posts/${postId}`} className="post__btn">
+          Continue reading
+        </Link>
+      </div>
     </article>
   );
 }
